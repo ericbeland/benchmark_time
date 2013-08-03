@@ -1,7 +1,8 @@
 # BenchmarkTime
 
 Benchmark the execution time of an arbitrary block of code. Specify concurrent
-threads and number of execution loops.
+threads and number of execution loops. The main use-case of this code vs. Benchmark
+is to benchmark with concurrency.
 
 ## Installation
 
