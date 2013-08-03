@@ -1,7 +1,7 @@
 # BenchmarkTime
 
 Benchmark the execution time of an arbitrary block of code. Specify concurrent
-threads and number of execution loops for more robust sampling.
+threads and number of execution loops.
 
 ## Installation
 
@@ -18,26 +18,36 @@ Or install it yourself as:
     $ gem install benchmark_time
 
 ## Usage
-  require 'benchmark_time'
 
-    benchmark_time(threads: 10, loops: 2) do
+  require 'benchmark_time'
+  require 'bunny'
+
+    # Benchmark connecting and filing an item into rabbitmq with bunny
+    benchmark_time(num_threads: 10, num_loops: 5) do
       conn = Bunny.new
       conn.start
       ch  = conn.create_channel
       q   = ch.queue("test1")
-      q.publish(@data)
+      q.publish('hello bunny')
       conn.stop
     end
 
   ->
+  --------------------------------------------------------------
 
-  "----------------------------------------"
-  "Samples:               20"
-  "Min time:              0.059449195861816406"
-  "Max time:              0.15325689315795898"
-  "Average time:          0.10354292392730713"
-  "Standard Deviation:    0.027390028761805192"
-  "----------------------------------------"
+  Samples:                    50
+
+  Min time (ms):              6
+
+  Max time (ms):              157
+
+  Average time (ms):          32.6
+
+  Standard Deviation (ms):    25.33046886777315
+
+  --------------------------------------------------------------
+
+
 
 ## Contributing
 

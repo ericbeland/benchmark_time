@@ -14,9 +14,9 @@ module BenchmarkTime
     # Create and run a new benchmark with output to the command line
     # ==== Options
       # +:work_warmup_proc:+ A proc to call for each thread. this can pre-warm connections, 
-      # or perform oother non-timed work.
-      # +:threads+  Number of concurrent threads to execute the work
-      # +:loops+    Number of times to call the block in each execution thread.
+      # or perform other non-timed work.
+      # +: num_threads+  Number of concurrent threads to execute the work
+      # +: num_loops+    Number of times to call the block in each execution thread.
     def initialize(options = {}, &work_block)
       default_options = {num_threads: 10, num_loops: 10, print_samples: true, work_warmup_proc: nil}
       options = default_options.merge(options)
