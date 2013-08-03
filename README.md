@@ -19,8 +19,8 @@ Or install it yourself as:
 
 ## Usage
 
-  require 'benchmark_time'
-  require 'bunny'
+    require 'benchmark_time'
+    require 'bunny'
 
     # Benchmark connecting and filing an item into rabbitmq with bunny
     benchmark_time(num_threads: 10, num_loops: 5) do
