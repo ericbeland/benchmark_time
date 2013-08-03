@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = BenchmarkTime::VERSION
   spec.authors       = ["ebeland"]
   spec.email         = ["ebeland@constantcontact.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Quickly benchmark functionality from the command line}
+  spec.summary       = %q{Run and benchmark a ruby block with min/max/avg}
   spec.homepage      = ""
   spec.license       = "MIT"
 
