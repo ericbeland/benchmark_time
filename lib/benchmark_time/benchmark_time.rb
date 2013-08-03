@@ -20,7 +20,8 @@ module BenchmarkTime
     def initialize(options = {}, &work_block)
       default_options = {num_threads: 10, num_loops: 10, print_samples: true, work_warmup_proc: nil}
       options = default_options.merge(options)
-      options.to_instance_variables(binding, define: :attr_reader)
+      # experiment: auto-create instance variables from hash...
+      options.to_instance_variables(binding, define: :attr_reader) 
       @threads            = []
       @results            = []
       @results.extend(EnumerableStatistics)

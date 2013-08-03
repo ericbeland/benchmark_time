@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "benchmark_time"
   spec.version       = BenchmarkTime::VERSION
   spec.authors       = ["ebeland"]
-  spec.email         = ["ebeland@constantcontact.com"]
+  spec.email         = ["ebeland@gmail.com"]
   spec.description   = %q{Quickly benchmark functionality from the command line}
   spec.summary       = %q{Run and benchmark a ruby block with min/max/avg}
-  spec.homepage      = ""
+  spec.homepage      = "http://github.com/ericbeland"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
