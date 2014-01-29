@@ -1,4 +1,6 @@
 module HashExtensions
+
+  # experiment to make hash arguments into instance variables
   def to_instance_variables(bind, opts={})
     each do |key, val|
       bind.eval("@#{key}=#{val.inspect}")
