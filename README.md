@@ -6,11 +6,7 @@ threads and number of execution loops for more robust sampling.
 
 BenchmarkTime is especially built to benchmark things like external services, 
 rather than ruby code itself. It can do something like a small scale 
-load test of external dependencies.
-=======
-threads and number of execution loops. The main use-case of this code vs. Benchmark
-is to benchmark with concurrency.
->>>>>>> 591d6e0da67b27c811ee0a4c5ddd1cc608cee152
+load test of external dependencies and give you a benchmark with concurrency.
 
 ## Installation
 
@@ -27,12 +23,9 @@ Or install it yourself as:
     $ gem install benchmark_time
 
 ## Usage
-<<<<<<< HEAD
-  require 'benchmark_time'
-
-    benchmark_time(threads: 10, loops: 2) do
-=======
-
+ 
+ # Benchmarking rabbitmq with bunny:
+ 
     require 'benchmark_time'
     require 'bunny'
 
